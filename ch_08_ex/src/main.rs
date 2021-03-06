@@ -27,9 +27,9 @@ fn find_median(int_list: &Vec<i32>) -> f64 {
     let int_list_len = list_clone.len();
 
     if int_list_len % 2 == 0 {
-        (int_list[int_list_len / 2] + int_list[(int_list_len / 2) - 1]) as f64 / 2.0
+        (list_clone[int_list_len / 2] + list_clone[(int_list_len / 2) - 1]) as f64 / 2.0
     } else {
-        int_list[int_list_len / 2] as f64
+        list_clone[int_list_len / 2] as f64
     }
 }
 
@@ -48,7 +48,7 @@ fn find_mode(int_list: &Vec<i32>) -> &i32 {
 }
 
 fn ex1() {
-    let int_list = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1];
+    let int_list = vec![1, 3, 2];
 
     let mean = find_mean(&int_list);
     let median = find_median(&int_list);
